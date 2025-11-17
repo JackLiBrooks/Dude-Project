@@ -1,5 +1,7 @@
 public class Dude {
   private float x, y, vx, vy;
+  public boolean collided = false;
+  private float posx, posy;
 
   public Dude(float x, float y) {
     vx = (float)(Math.random()* 11 + 1);

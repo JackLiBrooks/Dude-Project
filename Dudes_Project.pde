@@ -7,6 +7,9 @@ void setup(){
 
 void draw(){
   background(40);
+  aidan.update();
   aidan.show();
+  micah.update();
   micah.show();
+
 }
