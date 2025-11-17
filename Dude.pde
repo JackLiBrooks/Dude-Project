@@ -12,6 +12,20 @@ public class Dude {
   }
   
   void update() {
+    x += vx;
+    y += vy;
+    if ((x + 50) >= 800){
+      vx = -vx;
+    }
+    if ((x + 50) <= 0){
+      vx = -vx;
+    }
+    if ((y + 50) <= 0){
+      vy = -vy;
+    }
+    if ((y + 50) >= 800){
+      vy = -vy;
+    }
     
   }
   
