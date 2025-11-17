@@ -3,12 +3,14 @@ public class Dude {
   public boolean collided = false;
 
   public Dude(float x, float y) {
+    // assigns random speed from 1-10 to dude
     vx = (float)(Math.random()* 11 + 1);
     vy = (float)(Math.random()* 11 + 1);
     this.x = x;
     this.y = y;
   }
   boolean collidesWith(Dude other) {
+    // calculate distance from dude1 to dude2 with distance formula
     float dx = this.x - other.x;
     float dy = this.y - other.y;
     float distance = sqrt(dx*dx + dy*dy);
@@ -21,8 +23,11 @@ public class Dude {
   }
 
   void update() {
+    collided = false;
+    // position updates
     x += vx;
     y += vy;
+    // boundary detection
     if ((x + 50) >= 800) {
       vx = -vx;
     }
@@ -38,6 +43,11 @@ public class Dude {
   }
 
   private void body() {
+    if (collided) {
+      fill(255, 0, 0); // red if collided
+    } else {
+      fill(255);
+    }
     circle(x, y, 100);
   }
 }

@@ -8,9 +8,7 @@ void setup() {
 void draw() {
   background(40);
   aidan.update();
-  aidan.show();
   micah.update();
-  micah.show();
   if (aidan.collidesWith(micah)) {
     aidan.collided = true;
     micah.collided = true;
@@ -19,4 +17,6 @@ void draw() {
     micah.vx *= -1;
     micah.vy *= -1;
   }
+  aidan.show();
+  micah.show();
 }
