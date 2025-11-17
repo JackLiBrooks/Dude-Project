@@ -12,6 +12,7 @@ void draw() {
   if (aidan.collidesWith(micah)) {
     aidan.collided = true;
     micah.collided = true;
+    // make dudes "bounce" off of each other
     aidan.vx *= -1;
     aidan.vy *= -1;
     micah.vx *= -1;

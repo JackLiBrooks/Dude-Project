@@ -1,5 +1,5 @@
 public class Dude {
-  private float x, y, vx, vy;
+  private float x, y, vx, vy, count;
   public boolean collided = false;
 
   public Dude(float x, float y) {
@@ -23,7 +23,14 @@ public class Dude {
   }
 
   void update() {
-    collided = false;
+    // make the dudes red for longer time after collision
+    if (collided) {
+      count ++;
+      if (count == 20) {
+        collided = false;
+        count = 0;
+      }
+    }
     // position updates
     x += vx;
     y += vy;
@@ -46,7 +53,7 @@ public class Dude {
     if (collided) {
       fill(255, 0, 0); // red if collided
     } else {
-      fill(255);
+      fill(255); // white otherwise
     }
     circle(x, y, 100);
   }
