@@ -1,7 +1,6 @@
 public class Dude {
   private float x, y, vx, vy;
   public boolean collided = false;
-  private float posx, posy;
 
   public Dude(float x, float y) {
     vx = (float)(Math.random()* 11 + 1);
@@ -19,10 +18,10 @@ public class Dude {
     if ((x + 50) >= 800){
       vx = -vx;
     }
-    if ((x + 50) <= 0){
+    if ((x - 50) <= 0){
       vx = -vx;
     }
-    if ((y + 50) <= 0){
+    if ((y - 50) <= 0){
       vy = -vy;
     }
     if ((y + 50) >= 800){

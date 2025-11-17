@@ -1,5 +1,5 @@
-Dude aidan = new Dude(5,10);
-Dude micah = new Dude(10,20);
+Dude aidan = new Dude(50,100);
+Dude micah = new Dude(100,200);
 
 void setup(){
   size(800, 800);
